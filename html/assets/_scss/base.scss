@@ -6,14 +6,9 @@
 @import "_navigation";
 @import "_header";
 @import "_footer";
-@import "_product-grid";
-@import "_pagination";
-@import "_filter";
-@import "_search";
 @import "_home";
-@import "_cdp";
-@import "_pdp";
-@import "_account";
+@import "_about";
+@import "_news";
 @import "_contact";
 
 @import "normalize.css";
@@ -167,7 +162,9 @@ h6 {
     padding: 0 48px;
     margin: 0 auto;
 }
-
+html{
+    overflow-x: hidden;
+}
 body{
     font-family: 'Maven Pro', sans-serif;
     padding: 0;
@@ -184,4 +181,21 @@ body{
     color: #C2A97C;
     font-weight: 400;
     margin-bottom: 40px;
+}
+
+.page-title{
+    .heading-title{
+        font-size: 70px;
+        font-weight: 700;
+    }
+}
+
+h3.title{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.date{
+    font-size: 14px;
+    color: rgba($color: #fff, $alpha: .5);
 }
