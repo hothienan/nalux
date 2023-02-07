@@ -1,0 +1,49 @@
+@charset "UTF-8";
+@import "_mixins";
+@import "_breakpoints";
+
+.navigation {
+    .navigation__tier-1{
+        & > .navigation__item{
+            & > .navigation__link{
+                font-size: 17px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .navigation__link{
+        &.navigation__column-title{
+            
+        }
+        
+    }
+    .mega-2columns-shop{
+        @include mq('tablet', min) {
+            flex: 1 0 40%;
+            max-width: 40%;
+            .navigation__tier-3{
+                column-count: 2;
+                column-gap: 50px;
+            }
+        }
+    }
+    .images-shop{
+        // display: none !important;
+        @include mq('tablet', min) {
+            flex: 1 0 40%;
+            max-width: 40%;
+            .navigation__tier-3{
+                display: flex !important;
+                > li{
+                    flex: 1 0 40%;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+    .navigation__item{
+        
+    }
+}

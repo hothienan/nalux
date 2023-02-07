@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import "_mixins";
+@import "_breakpoints";
+
+.phone,
+.email{
+    display: flex;
+    align-items: center;
+    i{
+        margin-right: 10px;
+        font-size: 20px;
+    }
+}
+.socials{
+    a{
+        text-decoration: none;
+        font-size: 20px;
+        margin-right: 6px;
+    }
+}
+
+.contact-form{
+    .lightish-spaced-row{
+        h2{
+            text-transform: capitalize;
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+}
+
+.slim-column-left-layout{
+    .column.righty-form{
+
+
+    }
+    .column.spaced-row{
+        .h3-style{
+            font-size: 20px;
+        }
+    }
+}

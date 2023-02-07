@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import "_mixins";
+@import "_breakpoints";
+
+.page-header{
+    h1.pagetitle.h3-style{
+        font-size: 35px;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+}
+.fx-custom-banner-cdp{
+    &.rimage-wrapper .rimage-background{
+        position: static;
+        min-height: 250px;
+    }
+    .page-header--padded-medium .overlay-text{
+        padding: 0;
+    }
+    .image-overlay--bg-shadow .overlay-text .overlay-text__inner:before{
+        background: none;
+    }
+}
+.subcollection-links--buttons{
+    margin-bottom: 20px;
+}
+.subcollection-links{
+    .btn.btn--tertiary{
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: none;
+        margin: 0 5px 10px;
+    }
+}
