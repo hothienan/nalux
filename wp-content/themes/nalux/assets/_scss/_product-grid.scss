@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@import "_mixins";
+@import "_breakpoints";
+
+.product-list{
+    .image-label-wrap{
+        overflow: hidden;
+        border: 1px solid #D3D3D3;
+    }
+    .product-block__image{
+        // box-shadow: 0px 0px 0px 1px #D3D3D3;
+    }
+    .product-block__title{
+        font-size: 18px;
+    }
+    .product-price{
+        .product-price__item{
+
+        }
+        .product-price__amount{
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .product-price__compare{
+
+        }
+        .price-label{
+            &.price-label--sold-out{
+
+            }
+        }
+    }
+}
+
+.template-index{
+    .product-list{
+        .image-label-wrap{
+            border: none;
+        }
+    }
+}

@@ -1,0 +1,205 @@
+@charset "UTF-8";
+@import "_mixins";
+@import "_breakpoints";
+
+
+.contact-us-cms{
+    padding-top: 120px;
+    .company-name{
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    .address-info{
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li{
+                margin-bottom: 10px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.contact-infomation-section,
+.contact-address-section{
+    padding: 80px 0;
+}
+
+.contact-infomation-section{
+    padding-bottom: 0;
+    .company-info{
+        margin-bottom: 60px;
+    }
+}
+
+.contact-address-section{
+    .container{
+
+    }
+    .address-items{
+        .item{
+            border-bottom: 1px solid rgba($color: #C2A97C, $alpha: .5);
+            padding: 44px 0;
+            display: flex;
+            margin: 0 -20px;
+            > div{
+                flex: 1;
+                padding: 0 20px;
+            }
+            &:last-child{
+                padding-bottom: 0;
+                border: none;
+            }
+        }
+    }
+    
+}
+
+.contact-form-section{
+    .container{
+        display: flex;
+    }
+}
+
+.contactForm{
+    flex: 2 0 587px;
+    margin-left: 40px;
+    padding-top: 24px;
+    .form{
+        .fieldset{
+            display: flex;
+            flex-wrap: wrap;
+            .field{
+                width: 100%;
+                padding: 0;
+                margin-bottom: 24px;
+            }
+            .control{
+                position: relative;
+                .input-text{
+                    font-size: 16px;
+                    &,
+                    & + label {
+                        position: relative;
+                    }
+                    &:focus,
+                    &:not(:placeholder-shown) {
+                        //border-color: rgba(white, .1);
+                        & ~ label {
+                            transform: translate(0, -16px) scale(.8);
+                            opacity: .8;
+                        }
+                    }
+                    & ~ label {
+                        position: absolute;
+                        top: 14px;
+                        left: 0;
+                        user-select: none;
+                        pointer-events: none;
+                        padding: 0;
+                        font-size: 16px;
+                        display: block;
+                        transition: transform 0.25s, opacity 0.25s ease;                            
+                        transform-origin: 0 0;
+                        opacity: 1;
+                    }
+                    &::placeholder{
+                        // color: transparent;
+                    }
+                }
+                
+            }
+        }
+        .actions{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 20px 0;
+            button{
+                height: 45px;
+                min-width: 190px;
+                border-radius: 30px;
+                background-color: #9C5E35;
+                border: none;
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+form {
+    margin-bottom: 0;
+}
+
+fieldset,
+figure {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+input,
+optgroup,
+select,
+textarea {
+    
+}
+
+input:-internal-autofill-selected{
+    background: none;
+}
+
+input {
+    appearance: none;
+}
+select {
+    appearance: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield !important;
+}
+select::-ms-expand {
+    display: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 0 10px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    background: rgba($color: #fff, $alpha: .05);
+    appearance: none;
+    -webkit-rtl-ordering: logical;
+}
+
+textarea.input-text{
+    width: 100%;
+    height: 216px;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    background: rgba($color: #fff, $alpha: .05);
+    appearance: none;
+    -webkit-rtl-ordering: logical;
+}

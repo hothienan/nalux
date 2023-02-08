@@ -2,13 +2,14 @@
 
 function ml_enqueue_script()
 {
-    wp_enqueue_script('nalux-jquery-plugins', get_template_directory_uri() . '/assets/js/plugins.js', array(), null, true);
+    wp_enqueue_script('nalux-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array('jquery'), null, true);
+    wp_enqueue_script('nalux-swiper-bundle', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), null, true);
     wp_enqueue_script('nalux-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), null, true);
 }
 
 function ml_enqueue_style()
 {
-    wp_enqueue_style('nalux-styles-main', get_template_directory_uri() . '/assets/css/style.css', array(), null, "all");
+    wp_enqueue_style('nalux-styles-main', get_template_directory_uri() . '/assets/css/base.css', array(), null, "all");
 }
 
 add_action('wp_enqueue_scripts', 'ml_enqueue_script', 0);

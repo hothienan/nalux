@@ -34,13 +34,35 @@ function custom_polylang_langswitcher() {
             'display_names_as' => 'slug'
         ];
 
-        $currentUrl = $_SERVER['HTTP_REFERER'];
-
         $output = '<ul class="polylang_langswitcher">'.pll_the_languages( $args ). '</ul>';
     }
 
     return $output;
 }
+
+/**
+ * Function for Preventing Deleting from POST/PAGE
+ * @param $postid
+ */
+function hook_delete_post( $postid ){
+    // We check if the global post type isn't ours and just return
+    global $post_type, $post, $unDeletePosts;
+
+    foreach ($unDeletePosts as $postType => $postList){
+        if ( $post_type == $postType && in_array($post->ID, $postList) ) {
+            echo "This is system article.  You can not delete it!";
+            exit;
+        }
+    }
+    return;
+}
+function unDeletePostIDs ($args){
+    global $unDeletePosts;
+    $unDeletePosts = $args;
+    add_action( 'before_delete_post', 'hook_delete_post' );
+    add_action( 'wp_trash_post', 'hook_delete_post' );
+}
+unDeletePostIDs(array('page' => array(96)));
 
 add_shortcode('polylang_langswitcher', 'custom_polylang_langswitcher');
 

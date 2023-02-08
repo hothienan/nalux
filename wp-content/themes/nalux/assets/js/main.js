@@ -1,22 +1,47 @@
 (function ($) {
     //"use strict";
-    var TD = TD || {};
+    var nalux = nalux || {};
 
-    TD = {
+    nalux = {
 
         _init: function () {
-            this._flashLight();
+            // this._flashLight();
             this._StickyHeader();
-            this._hambuger();
+            // this._hambuger();
             this._swipeBanner();
-            this._wowJs();
-            this._waypointCounter();
-            this._contactUsSendMail();
-            this._projectCategoryFilter();
+            // this._wowJs();
+            // this._waypointCounter();
+            // this._ssFinalCountdown();
         },
 
         _Resize: function () {
             
+        },
+
+        /* final countdown
+        * ------------------------------------------------------ */
+        _ssFinalCountdown: function(){
+
+            var finalDate =  new Date("November 20, 2022 00:00:00").getTime();
+            //-date: "Mar 25 2021",
+
+            $('.home-content__clock').countdown(finalDate)
+            .on('update.countdown finish.countdown', function(event) {
+
+                var str = '<div class=\"top\"><div class=\"time days\">' +
+                        '%D <span>day%!D</span>' + 
+                        '</div></div>' +
+                        '<div class=\"time hours\">' +
+                        '%H <span>H</span></div>' +
+                        '<div class=\"time minutes\">' +
+                        '%M <span>M</span></div>' +
+                        '<div class=\"time seconds\">' +
+                        '%S <span>S</span></div>';
+
+                $(this)
+                .html(event.strftime(str));
+
+            });
         },
 
         _flashLight: function(){
@@ -32,16 +57,10 @@
             var navbarHeight = $('header');
             $(window).scroll(function(){
                 if ($(window).scrollTop() >= 60) {
-                    if(!navbarHeight.hasClass('opened')){
-                        navbarHeight.addClass('fixed');
-                        navbarHeight.addClass('fixed_white');
-                    }
+                    navbarHeight.addClass('fixed');
                 }
                 else {
-                    if(!navbarHeight.hasClass('opened')){
-                        navbarHeight.removeClass('fixed');
-                        navbarHeight.removeClass('fixed_white');
-                    }
+                    navbarHeight.removeClass('fixed');
                 }
             });
             $('body').on('click', '.hamburger', function(e) {
@@ -79,64 +98,16 @@
         },
 
         _swipeBanner: function(){
-            const homeswiper = new Swiper('.banner-homepage .swiper', {
-                loop: true,
-                spaceBetween: 30,
-                effect: "fade",
-                fadeEffect: {
-                    crossFade: true,
-                },
-                speed: 500,
-                navigation: {
-                    nextEl: '.swiper-button-next-custom',
-                    prevEl: '.swiper-button-prev-custom',
-                },
-                autoplay: {
-                    delay: 5000
-                }
-            });
-
-            const teamswiper = new Swiper('.team-profile .swiper', {
+            const teamswiper = new Swiper('.awards-section .swiper', {
                 loop: false,
                 spaceBetween: 30,
                 slidesPerView: 1,
                 // speed: 500,
-                freeMode: true,
+                // freeMode: true,
+                grabCursor: true,
                 navigation: {
-                    nextEl: '.swiper-button-next-custom',
-                    prevEl: '.swiper-button-prev-custom',
-                },
-                breakpoints: {
-                    480: {
-                        slidesPerView: 1,
-                        spaceBetween: 30,
-                    },
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 60,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 100,
-                        freeMode: false,
-                    },
-                },
-          
-            });
-
-            const newswiper = new Swiper('.news-slide .swiper', {
-                loop: false,
-                spaceBetween: 30,
-                slidesPerView: 1,
-                // speed: 500,
-                freeMode: true,
-                navigation: {
-                    nextEl: '.swiper-button-next-custom',
-                    prevEl: '.swiper-button-prev-custom',
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
                 breakpoints: {
                     480: {
@@ -149,57 +120,21 @@
                     },
                     768: {
                       slidesPerView: 3,
-                      spaceBetween: 40,
-                    },
-                    1024: {
-                      slidesPerView: 3,
-                      spaceBetween: 60,
+                      spaceBetween: 30,
                       freeMode: false,
                     },
-                  },
+                    1024: {
+                      slidesPerView: 4,
+                      spaceBetween: 60,
+                      
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween: 50,
+                    },
+                },
           
             });
-    
-        },
-
-        _wowJs: function(){
-            var wow = new WOW({
-                // boxClass:     'wow',      // animated element css class (default is wow)
-                animateClass: 'animate__animated', // animation css class (default is animated)
-                offset:       100,          // distance to the element when triggering the animation (default is 0)
-                mobile:       true,       // trigger animations on mobile devices (default is true)
-                live:         true,       // act on asynchronously loaded content (default is true)
-                callback:     function(box) {
-                    // the callback is fired every time an animation is started
-                    // the argument that is passed in is the DOM node being animated
-                },
-                scrollContainer: null,    // optional scroll container selector, otherwise use window,
-                resetAnimation: true,     // reset animation on end (default is true)
-                mobile:       false,      // trigger animations on mobile devices (true is default)
-            });
-            wow.init();
-        },
-
-        _waypointCounter: function(){
-            if($('.waypoint-block').length){
-                var counterUp = window.counterUp["default"]; // import counterUp from "counterup2"
-                var $counters = $(".counter");
-        
-                /* Start counting, do this on DOM ready or with Waypoints. */
-                $counters.each(function (ignore, counter) {
-                    var waypoint = new Waypoint( {
-                        element: $(this),
-                        handler: function() { 
-                            counterUp(counter, {
-                                duration: 1000,
-                                delay: 5
-                            }); 
-                            this.destroy();
-                        },
-                        offset: 'bottom-in-view',
-                    } );
-                });
-            }
         },
 
         _HandleOnResize: function () {
@@ -221,65 +156,10 @@
 
             });
         },
-        _contactUsSendMail: function () {
-            var send_mail_submit_btn = $('.contact-us-send-mail');
-            var send_mail_error_msg = $('.send-mail-error-msg');
-            var send_mail_success_msg = $('.send-mail-success-msg');
-            send_mail_submit_btn.on('click', function (e) {
-                e.preventDefault();
-                var _this = $(this);
-                var formData = _this.closest('form').serialize();
-                _this.attr("disabled", "disabled").find('span').text(_this.data('label-processing'));
-                $.post('/wp-admin/admin-ajax.php', {action: 'contactUsSendMail_Ajax', data: formData}, function (response) {
-                    _this.removeAttr("disabled").find('span').text(_this.data('label-submit'));
-                    try {
-                        response = JSON.parse(response);
-                    } catch (e) {
-                    }
-                    if (response.code == 0) {
-                        send_mail_success_msg.hide();
-                        send_mail_error_msg.html('<p>' + response.message + '</p>').hide().fadeIn();
-                    }
-                    else if (response.code == 1) {
-                        send_mail_error_msg.hide();
-                        send_mail_success_msg.html('<p>' + response.message + '</p>').hide().fadeIn();
-                    }
-                    $('html, body').animate({scrollTop: '0px'}, 0);
-                });
-            });
-        },
-
-        _projectCategoryFilter: function () {
-            var filter_click_link = $('.category-filter');
-            var product_block = $('div.product-block');
-            filter_click_link.on('click', function (e) {
-                e.preventDefault();
-                var _this = $(this);
-                var filter = _this.data('filter');
-                _this.closest('ul').find('li').removeClass('active');
-                _this.closest('li').addClass('active');
-                $('div.project-linkmore').remove();
-                $.post('/wp-admin/admin-ajax.php', {action: 'projectCategoryFilter_Ajax', data: filter}, function (response) {
-                    try {
-                        response = JSON.parse(response);
-                    } catch (e) {
-                    }
-                    if (response.code == 0) {
-                        product_block.html(response.message);
-                    }
-                    else {
-                        product_block.html(response.message);
-                        if(response.seemore) {
-                            $(response.seemore).insertAfter(product_block);
-                        }
-                    }
-                });
-            });
-        },
     }
 
     $(document).ready(function() {
-        TD._init();
+        nalux._init();
         $(window).trigger('resize').trigger('scroll');
     });
 

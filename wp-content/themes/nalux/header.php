@@ -1,12 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7" xml:lang="en" lang="en"> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8" xml:lang="en" lang="en"> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9" xml:lang="en" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" xml:lang="en" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>    
     <?php include TEMPLATEPATH . '/includes/header/meta.php'; ?>
     <?php wp_head(); ?>
@@ -14,7 +7,7 @@
 <?php
 $pt = get_page_template('pagename');
 global $activeMenu;
-$activeMenu = array('about' => '', 'projects' => '', 'careers' => '', 'contact' => '', 'news' => '' );
+$activeMenu = array('about' => '', 'projects' => '', 'contact' => '', 'news' => '' );
 if($pt) {
     $arr = explode('/', $pt);
     $page = end($arr);
@@ -35,12 +28,8 @@ if($pt) {
             $cmsClass = 'cms-news';
             $activeMenu['news'] = 'active';
             break;
-        case 'page-careers.php':
-            $cmsClass = 'cms-careers';
-            $activeMenu['careers'] = 'active';
-            break;
         case 'page.php':
-            if(is_home()) $cmsClass = 'cms-index';
+            if(is_home()) $cmsClass = '';
             else if( $postType = get_post_type( get_the_ID() )) {
                 switch ($postType) {
                     case 'post':
@@ -49,9 +38,6 @@ if($pt) {
                     case 'project':
                         $cmsClass = 'cms-project';
                         break;
-                    case 'career':
-                        $cmsClass = 'cms-careers';
-                        break;
                     default:
                         $cmsClass = 'cms-index';
                         break;
@@ -59,10 +45,9 @@ if($pt) {
             }
             break;
         default:
-            $cmsClass = 'cms-index';
+            $cmsClass = '';
             break;
     }
 }
 ?>
 <body class="<?php echo $cmsClass ?>">
-    <div class="page-wrapper">

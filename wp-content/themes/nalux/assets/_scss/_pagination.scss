@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import "_mixins";
+@import "_breakpoints";
+
+.pagination-row{
+    margin-bottom: 50px;
+}
+
+.pagination{
+    .pagination__sep, .pagination__number{
+        width: 45px;
+        height: 45px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+        &.active{
+            border-radius: 50%;
+            background-color: #000;
+            color: #fff;
+        }
+    }
+    .prev,
+    .next{
+        width: 20px;
+        height: 45px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

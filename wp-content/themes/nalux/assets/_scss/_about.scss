@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@import "_mixins";
+@import "_breakpoints";
+
+.about-us-cms{
+    .banner{
+        position: relative;
+        &:before{
+            content: '';
+            background: rgb(16,38,44);
+            background: linear-gradient(0deg, rgba(16,38,44,1) 0%, rgba(16,38,44,0) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .contain{
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 582px;
+            color: #fff;
+            font-size: 17px;
+            .title{
+                font-size: 70px;
+                font-weight: 700;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.waypoint-block{
+    .content{
+        display: flex;
+        .box{
+            flex: 1 1 auto;
+            text-align: center;
+        }
+        .number{
+            font-family: 'Fahkwang', sans-serif;
+            font-size: 50px;
+            color: #C2A97C;
+        }
+    }
+}
+.company-section,
+.profile-section,
+.partner-section,
+{
+    padding: 80px 0;
+}
+
+.company-section{
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .block{
+        flex: 0 1 405px;
+        &.content{
+            margin-left: 60px;
+            display: flex;
+            flex-direction: column;
+            align-self: flex-end;
+            &:first-child{
+                margin-left: 0;
+                align-self: flex-start;
+            }
+            
+            .description{
+                margin-bottom: 50px;
+            }
+        }
+        &.gallery-block{
+            flex: 0 1 273px;
+            margin-left: 40px;
+        }
+    }
+}
+
+.profile-section{
+    .profiles-block{
+        max-width: 984px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        .item{
+            display: flex;
+            align-items: flex-end;
+            width: 582px;
+            margin-left: auto;
+            margin-top: -50px;
+            &:first-child{
+                margin-top: 0;
+            }
+            &:nth-child(2n+1){
+                margin-left: unset;
+                margin-right: auto;
+                .caption{
+                    margin-left: 24px;
+                    margin-right: 0;
+                }
+                .profile-photo{
+                    order: 0;
+                }
+            }
+        }
+        .profile-photo{
+            order: 1;
+            width: 245px;
+            flex: 1 0 245px;
+        }
+        .caption{
+            margin-right: 24px;
+            span{
+                font-size: 14px;
+            }
+            .name{
+                font-size: 24px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.partner-section{
+    .container{
+        display: flex;
+    }
+    .heading-title{
+        flex-shrink: 0;
+    }
+    .partners-block{
+        display: flex;
+        flex-wrap: wrap;
+        .item{
+            width: 120px;
+            margin-left: 44px;
+            margin-bottom: 44px;
+        }
+    }
+}
