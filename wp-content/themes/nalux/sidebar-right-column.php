@@ -1,0 +1,1 @@
+<?php if ( is_active_sidebar( 'slider-mer-right-column' ) ) dynamic_sidebar( 'slider-mer-right-column' ); ?>

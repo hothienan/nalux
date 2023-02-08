@@ -1,0 +1,49 @@
+GET_IN_TOUCH : GET IN TOUCH!
+GET_IN_TOUCH CONTENT : Let's make friends! We will convince you to love our vision and make your dream designs come true!
+Address : 120/40-42 Nguyen Van Huong St., Thao Dien, HCMC
+CONTACT_US : CONTACT US
+Coppyright_text :  Copyright 2022. All rights reserved
+Discover More: Discover More
+Next project: Next project
+ABOUT US: ABOUT US
+PROJECTS: PROJECTS
+NEWS: NEWS
+CAREERS: CAREERS
+CONTACT US: CONTACT US
+Processing: Processing
+Send Request: Send Request
+Please ensure all required fields are completed.: Please ensure all required fields are completed.
+Please ensure you entered a valid phone number.: Please ensure you entered a valid phone number.
+Please ensure you entered a valid email address.: Please ensure you entered a valid email address.
+Your email has been sent successful!: Your email has been sent successful!
+You have the New Request: You have the New Request
+Send mail error, please checking your mail server again.: Send mail error, please checking your mail server again.
+You have received an email from user. Below is user's information.: You have received an email from user. Below is user's information.
+Name: Name
+Email: Email
+Email: Email
+Comment: Comment
+Kind regards: Kind regards
+WHAT WE DO: WHAT WE DO
+OUR TEAM: OUR TEAM
+OUR STAFFS: OUR STAFFS
+years of experience: years of experience
+finished projects: finished projects
+partner companies: partner companies
+years of establishment: years of establishment
+WE'RE HIRING: WE'RE HIRING
+All: All
+Residence: Residence
+Commerce: Commerce
+Office: Office
+There is no project!: There is no project!
+Location: Location
+Type: Type
+Style: Style
+Description: Description
+SEE MORE CAREERS: SEE MORE CAREERS
+SEE MORE PROJECT: SEE MORE PROJECT
+All Press: All Press
+Interior: Interior
+Author: Author
+

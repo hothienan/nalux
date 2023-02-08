@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="vi">> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="vi">> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="vi">> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="vi"> <!--<![endif]-->
+<head>
+    <title><?php echo $subject; ?></title>
+    <?php include TEMPLATEPATH . '/includes/header/meta.php'; ?>
+</head>
+
+<body>
+<div style="max-width:700px; margin:0 auto;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
+           style="padding:0px; border-collapse:collapse">
+        <tr>
+            <td bgcolor="#020202" height="110px" style="text-align:center;"><img
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-white.png"/></td>
+        </tr>
+        <tr>
+            <td style="padding-bottom:70px;">
+                <div style="max-width:82%;margin:0 auto;">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
+                           style="border-collapse:collapse">
+                        <tr>
+                            <td>
+                                <?php 
+                                $admin = 'ADMIN';
+                                if (!empty($admin)) {
+                                    ?>
+                                    <p style="font-size:24px;font-weight:bold ;font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;padding-top: 31px;">
+                                        Dear <?php echo $admin;  ?>,
+                                    </p>
+                                <?php
+                                }
+                                ?>
+                                <p style="padding-top: 17px; width: 76%;line-height: 21px;"><?php echo pll__("You have received an email from user. Below is user's information."); ?></p>
+
+                                <div style="padding-top: 14px;">
+                                    <div><span
+                                            style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Name'); ?>
+                                            :</span> <?php echo $name; ?></div>
+                                    <div><span
+                                            style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Email'); ?>
+                                            :</span> <?php echo $email; ?></div>
+                                    <div><span
+                                            style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('City'); ?>
+                                            :</span> <?php echo $city; ?></div>
+                                    <div><span
+                                            style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Phone Number'); ?>
+                                            :</span> <?php echo $phone; ?></div>
+                                    <div style="padding-top: 3px;"><span
+                                            style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Comment'); ?>
+                                            :</span> <?php echo $comment; ?></div>
+                                    <div style="padding-top: 3px;"><span
+                                            style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Area'); ?>
+                                            :</span> <?php echo $radio.'m2'; ?></div>
+                                </div>
+
+                                <p style="padding-top: 12px;"><?php echo pll__('Kind regards'); ?>,</p>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+
+</html>	
