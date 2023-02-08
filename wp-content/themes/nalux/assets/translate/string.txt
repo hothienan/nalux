@@ -6,3 +6,4 @@ News: News
 Contact: Contact
 Home page: Home page
 Awards: Awards
+Hot news: Hot news
