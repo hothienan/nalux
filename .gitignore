@@ -1,0 +1,11 @@
+.DS_Store
+.DS_Store/*
+!/.gitignore
+html/gulpfile.js
+html/package.json
+html/package-lock.json
+html/npm-shrinkwrap.json
+html/node_modules
+wp-config.php
+.htaccess
+.idea
