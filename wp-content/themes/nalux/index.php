@@ -1,7 +1,10 @@
 <?php
 get_header();
 include TEMPLATEPATH . '/includes/header/header.php';
-$lang = pll_current_language('slug') == 'en' ? 'en' : 'vn';
+$lang = 'vn';
+if (function_exists('pll_current_language')) {
+    $lang =  pll_current_language('slug') == 'en' ? 'en' : 'vn';
+}
 ?>
     <div class="banner">
         <?php
