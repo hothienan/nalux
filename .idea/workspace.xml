@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0269178a-579a-4cd7-9758-e16da02d91d9" name="Changes" comment="" />
+    <list default="true" id="0269178a-579a-4cd7-9758-e16da02d91d9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +41,7 @@
       <workItem from="1675667875610" duration="543000" />
       <workItem from="1675785754004" duration="708000" />
       <workItem from="1675796580109" duration="158000" />
+      <workItem from="1675836677271" duration="1137000" />
     </task>
     <task id="LOCAL-00001" summary="html">
       <created>1675667954744</created>
@@ -61,7 +64,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675796705882</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="html">
+      <created>1675836695847</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675836695847</updated>
+    </task>
+    <task id="LOCAL-00005" summary="html">
+      <created>1675836722025</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675836722025</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,6 +94,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="html" />

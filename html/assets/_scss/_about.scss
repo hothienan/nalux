@@ -107,6 +107,10 @@
                 .profile-photo{
                     order: 0;
                 }
+                .profiles-expand{
+                    left: 40px;
+                    right: inherit;
+                }
             }
         }
         .profile-photo{
@@ -116,12 +120,66 @@
         }
         .caption{
             margin-right: 24px;
-            span{
+            .sub-position{
                 font-size: 14px;
+                margin-bottom: 8px;
+            }
+            .sub-title{
+                display: flex;
+                margin-bottom: 30px;
             }
             .name{
                 font-size: 24px;
                 font-weight: 500;
+            }
+            .sub-content{
+
+            }
+        }
+        .tooltip-block{
+            font-size: 16px;
+            font-weight: 400;
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            .icon-arrow-expand{
+                font-size: 16px;
+                color: #4B858E;
+                cursor: pointer;
+                &.show-tooltip{
+                    & + .profiles-expand{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .profiles-expand{
+            background-color: rgba($color: #4B858E, $alpha: .85);
+            padding: 30px 10px 30px 30px;
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            right: 40px;
+            bottom: -10px;
+            z-index: 2;
+            display: none;
+            .scroller{
+                padding-right: 20px;
+                height: 100%;
+                overflow: hidden;
+                overflow-y: auto;
+                .position{
+                    margin-bottom: 8px;
+                }
+                .name{
+                    margin-bottom: 30px;
+                }
+                .description{
+                    p{
+                        margin-bottom: 30px;
+                    }
+                }
             }
         }
     }
