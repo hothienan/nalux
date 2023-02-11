@@ -22,3 +22,5 @@ Your email has been sent successful!: Your email has been sent successful!
 You have the New Request: You have the New Request
 Send mail error, please checking your mail server again.: Send mail error, please checking your mail server again.
 You have received an email from user. Below is user's information.: You have received an email from user. Below is user's information.
+Partner: Partner
+Boss: Boss

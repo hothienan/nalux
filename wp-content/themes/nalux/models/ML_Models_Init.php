@@ -16,6 +16,7 @@ class ML_Models_Init{
 		$this->ptProject();
 		$this->ptOurStaff();
 		$this->ptAwards();
+		$this->ptPartner();
 		$this->projectTaxonomy();
 	}
 	
@@ -55,6 +56,19 @@ class ML_Models_Init{
 		$TDARCHCustomType->code = 'staff';
 		$TDARCHCustomType->name = 'Đội ngũ';
 		$TDARCHCustomType->menu_name = 'Our Staff';
+		$TDARCHCustomType->show_in_menu = true;
+		$TDARCHCustomType->supports = array('title',"editor","thumbnail");
+		$TDARCHCustomType->register();
+
+	}
+
+	private function ptPartner(){
+
+		$TDARCHCustomType = new MLCustomtype();
+		$TDARCHCustomType->slug = 'partner';
+		$TDARCHCustomType->code = 'partner';
+		$TDARCHCustomType->name = 'Đối tác';
+		$TDARCHCustomType->menu_name = 'Our Partner';
 		$TDARCHCustomType->show_in_menu = true;
 		$TDARCHCustomType->supports = array('title',"editor","thumbnail");
 		$TDARCHCustomType->register();
