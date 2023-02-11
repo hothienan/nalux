@@ -126,5 +126,25 @@ function ml_widgets_init_maps()
     ));
 }
 
+/*
+ * Function for Creating Admin Option in General TAB
+ */
+function my_general_settings_register_fields()
+{
+    register_setting('general', 'mail_from', 'esc_attr');
+    register_setting('general', 'mail_to', 'esc_attr');
+    add_settings_field('mail_from', '<label for="mail_from">'.__('Sending Email' , 'mail_from' ).'</label>' , 'my_general_mail_from', 'general');
+    add_settings_field('mail_to', '<label for="mail_to">'.__('Receiving Email' , 'mail_to' ).'</label>' , 'my_general_mail_to', 'general');
+}
+function my_general_mail_to() {
+    $mailTo = get_option( 'mail_to', '' );
+    echo '<input id="mail_to" style="width: 35%;" type="text" name="mail_to" value="' . $mailTo . '" />';
+}
+function my_general_mail_from() {
+    $mailFrom = get_option( 'mail_from', '' );
+    echo '<input id="mail_from" style="width: 35%;" type="text" name="mail_from" value="' . $mailFrom . '" />';
+}
+add_filter('admin_init', 'my_general_settings_register_fields');
+
 add_theme_support( 'post-thumbnails' );
 ?>

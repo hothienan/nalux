@@ -9,6 +9,7 @@
             this._StickyHeader();
             // this._hambuger();
             this._swipeBanner();
+            this._contactUsSendMail();
             // this._wowJs();
             // this._waypointCounter();
             // this._ssFinalCountdown();
@@ -154,6 +155,33 @@
                     self._Resize();
                 }, 200);
 
+            });
+        },
+        _contactUsSendMail: function () {
+            var send_mail_submit_btn = $('.contact-us-send-mail');
+            var send_mail_error_msg = $('.send-mail-error-msg');
+            var send_mail_success_msg = $('.send-mail-success-msg');
+            send_mail_submit_btn.on('click', function (e) {
+                e.preventDefault();
+                var _this = $(this);
+                var formData = _this.closest('form').serialize();
+                _this.attr("disabled", "disabled").find('span').text(_this.data('label-processing'));
+                $.post('/wp-admin/admin-ajax.php', {action: 'contactUsSendMail_Ajax', data: formData}, function (response) {
+                    _this.removeAttr("disabled").find('span').text(_this.data('label-submit'));
+                    try {
+                        response = JSON.parse(response);
+                    } catch (e) {
+                    }
+                    if (response.code == 0) {
+                        send_mail_success_msg.hide();
+                        send_mail_error_msg.html('<p>' + response.message + '</p>').hide().fadeIn();
+                    }
+                    else if (response.code == 1) {
+                        send_mail_error_msg.hide();
+                        send_mail_success_msg.html('<p>' + response.message + '</p>').hide().fadeIn();
+                    }
+                    $('html, body').animate({scrollTop: '0px'}, 0);
+                });
             });
         },
     }

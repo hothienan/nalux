@@ -18,7 +18,7 @@
            style="padding:0px; border-collapse:collapse">
         <tr>
             <td bgcolor="#020202" height="110px" style="text-align:center;"><img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-white.png"/></td>
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png"/></td>
         </tr>
         <tr>
             <td style="padding-bottom:70px;">
@@ -40,24 +40,26 @@
                                 <p style="padding-top: 17px; width: 76%;line-height: 21px;"><?php echo pll__("You have received an email from user. Below is user's information."); ?></p>
 
                                 <div style="padding-top: 14px;">
-                                    <div><span
-                                            style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Name'); ?>
-                                            :</span> <?php echo $name; ?></div>
-                                    <div><span
-                                            style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Email'); ?>
-                                            :</span> <?php echo $email; ?></div>
-                                    <div><span
-                                            style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('City'); ?>
-                                            :</span> <?php echo $city; ?></div>
-                                    <div><span
-                                            style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Phone Number'); ?>
-                                            :</span> <?php echo $phone; ?></div>
-                                    <div style="padding-top: 3px;"><span
-                                            style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Comment'); ?>
-                                            :</span> <?php echo $comment; ?></div>
-                                    <div style="padding-top: 3px;"><span
-                                            style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Area'); ?>
-                                            :</span> <?php echo $radio.'m2'; ?></div>
+                                    <div>
+                                        <span style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Full name'); ?>
+                                            :
+                                        </span> <?php echo $name; ?>
+                                    </div>
+                                    <div>
+                                        <span style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Email'); ?>
+                                            :
+                                        </span> <?php echo $email; ?>
+                                    </div>
+                                    <div>
+                                        <span style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Phone number'); ?>
+                                            :
+                                        </span> <?php echo $phone; ?>
+                                    </div>
+                                    <div style="padding-top: 3px;">
+                                        <span style="font-weight:bold; font-family: 'FranklinGothicLT Demi', Arial, Helvetica, sans-serif;"><?php echo pll__('Comment'); ?>
+                                            :
+                                        </span> <?php echo $comment; ?>
+                                    </div>
                                 </div>
 
                                 <p style="padding-top: 12px;"><?php echo pll__('Kind regards'); ?>,</p>

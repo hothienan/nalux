@@ -16,9 +16,6 @@ class ML_Models_Data
     {
         add_action('wp_ajax_nopriv_contactUsSendMail_Ajax', array($this, 'contactUsSendMail_Ajax'));
         add_action('wp_ajax_contactUsSendMail_Ajax', array($this, 'contactUsSendMail_Ajax'));
-        
-        add_action('wp_ajax_nopriv_projectCategoryFilter_Ajax', array($this, 'projectCategoryFilter_Ajax'));
-        add_action('wp_ajax_projectCategoryFilter_Ajax', array($this, 'projectCategoryFilter_Ajax'));
     }
 
     /**
@@ -77,7 +74,6 @@ class ML_Models_Data
          * Data for send email to me
          */
         $emailData['subject'] = pll__('You have the New Request');
-        $emailData['content'] = get_option("jwp_coffee_list_send_mail_content");
         $emailContent = $this->getEmailTemplate('email-to-nalux', $emailData);
 
 
@@ -102,7 +98,7 @@ class ML_Models_Data
         if (!$data || !is_array($data)) return '';
         @extract($data);
 
-        $real_file_path = realpath(dirname(__FILE__)) . '/../includes/email-templates/email-to-tdarch.phtml';
+        $real_file_path = realpath(dirname(__FILE__)) . '/../includes/email-templates/email-to-nalux.phtml';
         if ( !file_exists($real_file_path)) {
             return '';
         }
@@ -111,48 +107,6 @@ class ML_Models_Data
         $content = ob_get_contents();
         ob_end_clean();
         return $content;
-    }
-    
-    function projectCategoryFilter_Ajax () {
-        $catFilter = $_POST['data'];
-        if ($catFilter == 'all') {
-            $tax_query = array();
-        }
-        else {
-            $tax_query = array(
-                array(
-                    'taxonomy' => 'category',
-                    'field'    => 'slug',
-                    'terms' => $catFilter
-                ));
-        }
-        $args = array(
-            'post_type' => 'project',
-            'tax_query' => $tax_query,
-            'post_status' => 'publish',
-            'lang' => pll_current_language('slug'),
-            'orderby' => 'date',
-            'order' => 'DESC',
-        );
-        $index = 1;
-        $loop = new WP_Query( $args );
-        $projectCount = $loop->found_posts;
-        $seeMores = '';
-        if ($projectCount > 7) {
-            $seeMores = '<div class="project-linkmore">
-                <a href="#" class="more"><span>' . pll__("SEE MORE PROJECTS") . '</span></a>
-            </div>';
-        }
-        $real_file_path = realpath(dirname(__FILE__)) . '/../includes/ajax-templates/project-category-filter.phtml';
-        if ( !file_exists($real_file_path)) {
-            return '';
-        }
-        ob_start();
-        include($real_file_path);
-        $content = ob_get_contents();
-        ob_end_clean();
-        if(empty($content)) die(json_encode(array('code' => '0', 'message' => pll__('There is no project!'))));
-        else die(json_encode(array('code' => '1', 'message' => $content, 'seemore' => $seeMores)));
     }
     
 }
