@@ -7,3 +7,6 @@ Contact: Contact
 Home page: Home page
 Awards: Awards
 Hot news: Hot news
+Contact: Contact
+Send: Send
+Nalux company: Nalux company

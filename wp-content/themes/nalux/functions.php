@@ -98,5 +98,33 @@ function ml_widgets_init_followus()
     ));
 }
 
+add_action('widgets_init', 'ml_widgets_init_about_us');
+function ml_widgets_init_about_us()
+{
+
+    register_sidebar(array(
+        'name' => 'About Us',
+        'id' => 'nalux-about-us',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
+    ));
+}
+
+add_action('widgets_init', 'ml_widgets_init_maps');
+function ml_widgets_init_maps()
+{
+
+    register_sidebar(array(
+        'name' => 'Google Maps',
+        'id' => 'nalux-maps',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
+    ));
+}
+
 add_theme_support( 'post-thumbnails' );
 ?>

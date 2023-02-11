@@ -17,7 +17,7 @@ if($pt) {
             $activeMenu['about'] = 'active';
             break;
         case 'page-contact.php':
-            $cmsClass = 'cms-contact-us';
+            $cmsClass = 'contact-us-cms';
             $activeMenu['contact'] = 'active';
             break;
         case 'page-project.php':
@@ -25,7 +25,7 @@ if($pt) {
             $activeMenu['projects'] = 'active';
             break;
         case 'page-news.php':
-            $cmsClass = 'cms-news';
+            $cmsClass = 'news-cms';
             $activeMenu['news'] = 'active';
             break;
         case 'page.php':
@@ -33,7 +33,7 @@ if($pt) {
             else if( $postType = get_post_type( get_the_ID() )) {
                 switch ($postType) {
                     case 'post':
-                        $cmsClass = 'cms-news';
+                        $cmsClass = 'news-cms';
                         break;
                     case 'project':
                         $cmsClass = 'cms-project';
