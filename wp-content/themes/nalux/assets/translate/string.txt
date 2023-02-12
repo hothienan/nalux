@@ -2,6 +2,7 @@ Project's name: Project's name
 Outstanding projects: Outstanding projects
 Intoduction: Introduction
 Projects : Projects
+Project: Project
 News: News
 Contact: Contact
 Home page: Home page
@@ -24,3 +25,8 @@ Send mail error, please checking your mail server again.: Send mail error, pleas
 You have received an email from user. Below is user's information.: You have received an email from user. Below is user's information.
 Partner: Partner
 Boss: Boss
+Urban property: Urban property
+Ecommerce property: Ecommerce property
+Industrial property: Industrial property
+Rental property: Rental property
+Resort property: Resort property
