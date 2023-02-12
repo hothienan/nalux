@@ -18,41 +18,6 @@
             
         },
 
-        /* final countdown
-        * ------------------------------------------------------ */
-        _ssFinalCountdown: function(){
-
-            var finalDate =  new Date("November 20, 2022 00:00:00").getTime();
-            //-date: "Mar 25 2021",
-
-            $('.home-content__clock').countdown(finalDate)
-            .on('update.countdown finish.countdown', function(event) {
-
-                var str = '<div class=\"top\"><div class=\"time days\">' +
-                        '%D <span>day%!D</span>' + 
-                        '</div></div>' +
-                        '<div class=\"time hours\">' +
-                        '%H <span>H</span></div>' +
-                        '<div class=\"time minutes\">' +
-                        '%M <span>M</span></div>' +
-                        '<div class=\"time seconds\">' +
-                        '%S <span>S</span></div>';
-
-                $(this)
-                .html(event.strftime(str));
-
-            });
-        },
-
-        _flashLight: function(){
-            var f = document.getElementById("desktop-integration"),
-                x = "",
-                y = "";
-            window.addEventListener("mousemove", (function(i) { 
-                x = i.clientX, y = i.clientY, 
-                f.style.transform = " matrix(1, 0, 0, 1, " + x + ", " + y + ") " }))
-        },
-
         _StickyHeader: function(){
             var navbarHeight = $('header');
             $(window).scroll(function(){
@@ -134,6 +99,10 @@
                     },
                 },
           
+            });
+            
+            $('.tooltip-block').on('click', '.icon-arrow-expand', function(){
+                $(this).toggleClass('show-tooltip');
             });
         },
 
