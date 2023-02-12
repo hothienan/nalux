@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0269178a-579a-4cd7-9758-e16da02d91d9" name="Changes" comment="" />
+    <list default="true" id="0269178a-579a-4cd7-9758-e16da02d91d9" name="Changes" comment="Implement Wordpress 6.1.1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,9 +26,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/nalux/assets" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/nalux/assets" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/nalux" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -39,6 +53,9 @@
       <workItem from="1675667875610" duration="543000" />
       <workItem from="1675785754004" duration="708000" />
       <workItem from="1675796580109" duration="158000" />
+      <workItem from="1675857172699" duration="2439000" />
+      <workItem from="1675859767995" duration="2079000" />
+      <workItem from="1675862222529" duration="24032000" />
     </task>
     <task id="LOCAL-00001" summary="html">
       <created>1675667954744</created>
@@ -61,7 +78,84 @@
       <option name="project" value="LOCAL" />
       <updated>1675796705882</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implement Wordpress 6.1.1">
+      <created>1675857324504</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675857324504</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Git ignore">
+      <created>1675857712878</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675857712878</updated>
+    </task>
+    <task id="LOCAL-00006" summary="htaccess">
+      <created>1675860645960</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675860645960</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Implement Home Page">
+      <created>1675871528987</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675871528988</updated>
+    </task>
+    <task id="LOCAL-00008" summary="News">
+      <created>1675876156751</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675876156751</updated>
+    </task>
+    <task id="LOCAL-00009" summary="uploads">
+      <created>1675876196038</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675876196038</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Sql">
+      <created>1675876595622</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675876595622</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Home page Project Category">
+      <created>1676124158139</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676124158139</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Contact page">
+      <created>1676127791924</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676127791924</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Contact us">
+      <created>1676130851202</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1676130851202</updated>
+    </task>
+    <task id="LOCAL-00014" summary="About page">
+      <created>1676132402331</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676132402331</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,9 +171,27 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="html" />
-    <option name="LAST_COMMIT_MESSAGE" value="html" />
+    <MESSAGE value="Implement Wordpress 6.1.1" />
+    <MESSAGE value="Git ignore" />
+    <MESSAGE value="htaccess" />
+    <MESSAGE value="Implement Home Page" />
+    <MESSAGE value="News" />
+    <MESSAGE value="uploads" />
+    <MESSAGE value="Sql" />
+    <MESSAGE value="Home page Project Category" />
+    <MESSAGE value="Contact page" />
+    <MESSAGE value="Contact us" />
+    <MESSAGE value="About page" />
+    <option name="LAST_COMMIT_MESSAGE" value="About page" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
