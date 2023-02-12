@@ -21,7 +21,7 @@ if($pt) {
             $activeMenu['contact'] = 'active';
             break;
         case 'page-project.php':
-            $cmsClass = 'cms-project';
+            $cmsClass = 'project-cms';
             $activeMenu['projects'] = 'active';
             break;
         case 'page-news.php':
@@ -36,10 +36,11 @@ if($pt) {
                         $cmsClass = 'news-cms';
                         break;
                     case 'project':
-                        $cmsClass = 'cms-project';
+                        if (is_tax()) $cmsClass = 'project-list-cms';
+                        else $cmsClass = 'project-cms';
                         break;
                     default:
-                        $cmsClass = 'cms-index';
+                        $cmsClass = '';
                         break;
                 }
             }
