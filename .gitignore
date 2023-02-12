@@ -7,6 +7,7 @@ html/package-lock.json
 html/npm-shrinkwrap.json
 html/node_modules
 wp-config.php
-#.htaccess
+.htaccess
 .idea
+.idea/*
 wp-config.php
