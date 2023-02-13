@@ -13,7 +13,7 @@ if($pt) {
     $page = end($arr);
     switch ($page) {
         case 'page-about.php':
-            $cmsClass = 'cms-about-us';
+            $cmsClass = 'about-us-cms';
             $activeMenu['about'] = 'active';
             break;
         case 'page-contact.php':

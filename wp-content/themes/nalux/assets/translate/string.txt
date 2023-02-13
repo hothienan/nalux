@@ -30,3 +30,7 @@ Ecommerce property: Ecommerce property
 Industrial property: Industrial property
 Rental property: Rental property
 Resort property: Resort property
+Position: Position
+Core values: Core values
+Vision and mission: Vision and mission
+Leadership team: Leadership team

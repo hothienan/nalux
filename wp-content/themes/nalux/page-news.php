@@ -91,7 +91,7 @@ if (function_exists('pll_current_language')) {
                                 <span class="label"><?php echo $catGroup; ?></span>
                                 <h3 class="title"><?php echo $title; ?></h3>
                                 <div class="subscript">
-                                    <?php echo $excerpt; ?>...
+                                    <?php echo $excerpt; ?>
                                 </div>
                                 <div class="date"><?php echo get_the_date( 'd.m.Y' ); ?></div>
                             </div>
