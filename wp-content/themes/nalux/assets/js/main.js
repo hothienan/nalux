@@ -9,49 +9,14 @@
             this._StickyHeader();
             // this._hambuger();
             this._swipeBanner();
-            this._contactUsSendMail();
             // this._wowJs();
             // this._waypointCounter();
             // this._ssFinalCountdown();
+            this._contactUsSendMail();
         },
 
         _Resize: function () {
             
-        },
-
-        /* final countdown
-        * ------------------------------------------------------ */
-        _ssFinalCountdown: function(){
-
-            var finalDate =  new Date("November 20, 2022 00:00:00").getTime();
-            //-date: "Mar 25 2021",
-
-            $('.home-content__clock').countdown(finalDate)
-            .on('update.countdown finish.countdown', function(event) {
-
-                var str = '<div class=\"top\"><div class=\"time days\">' +
-                        '%D <span>day%!D</span>' + 
-                        '</div></div>' +
-                        '<div class=\"time hours\">' +
-                        '%H <span>H</span></div>' +
-                        '<div class=\"time minutes\">' +
-                        '%M <span>M</span></div>' +
-                        '<div class=\"time seconds\">' +
-                        '%S <span>S</span></div>';
-
-                $(this)
-                .html(event.strftime(str));
-
-            });
-        },
-
-        _flashLight: function(){
-            var f = document.getElementById("desktop-integration"),
-                x = "",
-                y = "";
-            window.addEventListener("mousemove", (function(i) { 
-                x = i.clientX, y = i.clientY, 
-                f.style.transform = " matrix(1, 0, 0, 1, " + x + ", " + y + ") " }))
         },
 
         _StickyHeader: function(){
@@ -136,6 +101,10 @@
                 },
           
             });
+            
+            $('.tooltip-block').on('click', '.icon-arrow-expand', function(){
+                $(this).toggleClass('show-tooltip');
+            });
         },
 
         _HandleOnResize: function () {
@@ -162,7 +131,7 @@
             var send_mail_error_msg = $('.send-mail-error-msg');
             var send_mail_success_msg = $('.send-mail-success-msg');
             send_mail_submit_btn.on('click', function (e) {
-                e.preventDefault();
+                e.preventDefault();alert('cac');
                 var _this = $(this);
                 var formData = _this.closest('form').serialize();
                 _this.attr("disabled", "disabled").find('span').text(_this.data('label-processing'));

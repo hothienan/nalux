@@ -3,7 +3,7 @@
 @import "_breakpoints";
 
 footer{
-    color: #fff;
+    color: rgba($color: #fff, $alpha: .5);
     padding: 24px 0;
     .container{
         display: flex;
@@ -15,6 +15,13 @@ footer{
         margin: 0;
         padding: 0;
     }
+    a{
+        color: rgba($color: #fff, $alpha: .5);
+        transition: color .5s ease;
+        &:hover{
+            color: rgba($color: #fff, $alpha: 1);
+        }
+    }
 }
 .footer-links{
     ul{
@@ -23,17 +30,27 @@ footer{
             margin-right: 24px;
         }
         a{
-            color: rgba($color: #fff, $alpha: .5);
-            transition: color .5s ease;
             &:hover{
-                color: rgba($color: #fff, $alpha: 1);
+                text-decoration: none;
             }
         }
     }
 }
 
 .socials{
+    display: flex;
+    align-items: center;
+    > span{
+
+    }
     ul{
         display: flex;
+        font-size: 24px;
+        > li{
+            margin-left: 24px;
+            span{
+                display: none;
+            }
+        }
     }
 }
