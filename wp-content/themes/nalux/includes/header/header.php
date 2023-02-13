@@ -1,7 +1,7 @@
 <body>
     <header>
         <div class="container">
-            <a href="index.html" class="logo">
+            <a href="<?php if (function_exists('pll_home_url')) echo pll_home_url(); else echo home_utl(); ?>" class="logo">
                 <img src="images/logo.png" alt="Nalux" width="115" height="24">
             </a>
             <nav>

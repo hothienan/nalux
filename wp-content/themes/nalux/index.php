@@ -30,20 +30,29 @@ if (function_exists('pll_current_language')) {
                 </h2>
                 <div class="gallery-wrap">
                     <?php
-                        $terms = get_terms( array(
-                            'taxonomy' => 'project-group', // set your taxonomy here
-                            'hide_empty' => true)); // default: true
-                        if ( !empty( $terms ) && !is_wp_error( $terms ) ) {
-                            $items = 1;
-                            foreach( $terms as $term ) {
-                            ?>
-                            <div class="item item-<?php echo $items; ?>" style="background-image: url(<?php echo get_field( 'project-group-image', $term ); ?>);">
-                                <h3 class="h3-style"><?php echo esc_attr( $term->name ); ?></h3>
-                                <a href="<?php echo esc_url( get_term_link( $term ) ); ?>" class="link"></a>
-                            </div>
-                            <?php
-                                $items++;
-                            }
+                    $args = array(
+                        'post_type' => 'project',
+                        'post_status' => 'publish',
+                        'lang' => pll_current_language('slug'),
+                        'meta_key'      => 'is_outstanding',
+                        'meta_value'    => true,
+                        'posts_per_page' => 6,
+                        'orderby' => 'date',
+                        'order' => 'DESC',
+                    );
+
+                    $loop = new WP_Query($args);
+                    $items = 1;
+                    while ($loop->have_posts()) {
+                    $loop->the_post();
+                    $img = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+                    ?>
+                        <div class="item item-<?php echo $items; ?>" style="background-image: url(<?php echo $img; ?>);">
+                            <h3 class="h3-style"><?php echo esc_attr( get_the_title() ); ?></h3>
+                            <a href="<?php echo esc_url( the_permalink() ); ?>" class="link"></a>
+                        </div>
+                        <?php
+                            $items++;
                         }
                     ?>
                 </div>
