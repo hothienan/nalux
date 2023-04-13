@@ -74,11 +74,11 @@
             }
             &:hover{
                 flex: 7;
-                h3{
+                .h3-style{
                     font-size: 36px;
                 }
             }
-            h3{
+            .h3-style{
                 margin: 0;
                 font-size: 24px;
                 color: #fff;
@@ -144,12 +144,13 @@
             margin-bottom: 20px;
         }
         span.label{
-            font-size: 17px;
             color: rgba($color: #fff, $alpha: .5);
             margin-bottom: 10px;
         }
         .prj-name{
+            font-family: 'Oswald', sans-serif;
             font-size: 24px;
+            font-weight: 500;
             color: #4B858E;
             margin-bottom: 10px;
         }

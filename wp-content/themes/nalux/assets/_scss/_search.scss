@@ -2,15 +2,3 @@
 @import "_mixins";
 @import "_breakpoints";
 
-.main-search{
-    .main-search__input-container{
-        border-radius: 8px;
-        input[type=text].main-search__input{
-            padding: 0 14px 0 40px;
-        }
-    }
-    .main-search__button{
-        right: inherit;
-        left: 10px;
-    }
-}
