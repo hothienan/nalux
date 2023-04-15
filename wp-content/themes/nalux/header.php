@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo pll_current_language('locale'); //get_bloginfo("language") ?>">
 <head>    
     <?php include TEMPLATEPATH . '/includes/header/meta.php'; ?>
     <?php wp_head(); ?>

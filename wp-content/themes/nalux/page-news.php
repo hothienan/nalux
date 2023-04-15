@@ -64,13 +64,15 @@ if (function_exists('pll_current_language')) {
                 </div>
                 <div class="news-list-items">
                     <?php
+                    $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
                     $args = array(
                         'post_type' => 'post',
                         'post_status' => 'publish',
                         'lang' => pll_current_language('slug'),
                         'orderby' => 'date',
                         'post__not_in' => $excludeNews,
-//                        'posts_per_page' => 6,
+                        'paged' => $paged,
+                        'posts_per_page' => 3,
                         'order' => 'DESC',
                     );
 
@@ -99,6 +101,7 @@ if (function_exists('pll_current_language')) {
                         <?php
                     }
                     ?>
+                    <?php wpbeginner_numeric_posts_nav(); ?>
                 </div>
             </div>
         </div>
