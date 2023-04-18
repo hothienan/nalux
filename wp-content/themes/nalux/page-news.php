@@ -72,7 +72,7 @@ if (function_exists('pll_current_language')) {
                         'orderby' => 'date',
                         'post__not_in' => $excludeNews,
                         'paged' => $paged,
-                        'posts_per_page' => 3,
+                        'posts_per_page' => 2,
                         'order' => 'DESC',
                     );
 
@@ -101,7 +101,15 @@ if (function_exists('pll_current_language')) {
                         <?php
                     }
                     ?>
-                    <?php wpbeginner_numeric_posts_nav(); ?>
+                    <?php
+                    $pag_args1 = array(
+//                        'format'  => '?paged1=%#%',
+                        'current' => $paged,
+                        'total'   => $loop->max_num_pages,
+//                        'add_args' => array( 'paged2' => $paged )
+                    );
+                    echo paginate_links( $pag_args1 );
+                    ?>
                 </div>
             </div>
         </div>
