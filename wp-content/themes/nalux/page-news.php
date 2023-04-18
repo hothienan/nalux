@@ -47,14 +47,14 @@ if (function_exists('pll_current_language')) {
                             $title = get_the_title();
                             ?>
                             <div class="photo">
-                                <img src="<?php echo $img; ?>" alt="<?php echo $title; ?>">
+                                <a href="<?php echo get_the_permalink(); ?>"><img src="<?php echo $img; ?>" alt="<?php echo $title; ?>"></a>
                             </div>
                             <div class="caption">
                                 <span class="label"><?php
                                     if(function_exists('pll__')) echo pll__('Hot news');
                                     ?>
                                 </span>
-                                <h2 class="title"><?php echo $title; ?></h2>
+                                <h2 class="title"><a href="<?php echo get_the_permalink(); ?>"><?php echo $title; ?></a></h2>
                                 <div class="date"><?php echo get_the_date( 'd.m.Y' ); ?></div>
                             </div>
                             <?php
@@ -87,11 +87,11 @@ if (function_exists('pll_current_language')) {
                         ?>
                         <div class="item">
                             <div class="photo">
-                                <img src="<?php echo $img; ?>" alt="<?php echo $title; ?>" width="368" height="264">
+                                <a href="<?php echo get_the_permalink(); ?>"><img src="<?php echo $img; ?>" alt="<?php echo $title; ?>" width="368" height="264"></a>
                             </div>
                             <div class="content-inner">
                                 <span class="label"><?php echo $catGroup; ?></span>
-                                <h3 class="title"><?php echo $title; ?></h3>
+                                <h3 class="title"><a href="<?php echo get_the_permalink(); ?>"><?php echo $title; ?></a></h3>
                                 <div class="subscript">
                                     <?php echo $excerpt; ?>
                                 </div>
