@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0269178a-579a-4cd7-9758-e16da02d91d9" name="Changes" comment="" />
+    <list default="true" id="0269178a-579a-4cd7-9758-e16da02d91d9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +32,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -54,8 +56,7 @@
       <workItem from="1675857172699" duration="2439000" />
       <workItem from="1675859767995" duration="2079000" />
       <workItem from="1675862222529" duration="24032000" />
-      <workItem from="1681390928761" duration="907000" />
-      <workItem from="1681396414241" duration="929000" />
+      <workItem from="1681397640406" duration="510000" />
     </task>
     <task id="LOCAL-00001" summary="html">
       <created>1675667954744</created>
@@ -155,12 +156,12 @@
       <option name="project" value="LOCAL" />
       <updated>1676132402331</updated>
     </task>
-    <task id="LOCAL-00015" summary="update CSS layout">
-      <created>1681396438215</created>
+    <task id="LOCAL-00015" summary="update CSS">
+      <created>1681397692097</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1681396438215</updated>
+      <updated>1681397692097</updated>
     </task>
     <option name="localTasksCounter" value="16" />
     <servers />
@@ -195,8 +196,8 @@
     <MESSAGE value="Contact page" />
     <MESSAGE value="Contact us" />
     <MESSAGE value="About page" />
-    <MESSAGE value="update CSS layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="update CSS layout" />
+    <MESSAGE value="update CSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="update CSS" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
