@@ -10,6 +10,11 @@
                     dynamic_sidebar('nalux-top-menu');
                 ?>
             </nav>
+            <div class="search-block">
+                <div class="search">
+                    <?php get_search_form(); ?>
+                </div>
+            </div>
             <div class="langquage">
                 <?php echo do_shortcode('[polylang_langswitcher]'); ?>
             </div>

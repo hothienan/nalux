@@ -45,6 +45,7 @@ $lang = pll_current_language('slug') == 'en' ? 'en' : 'vn';
                     <?php
                     $i = 1;
                     $count = ceil((count($termArg) - 1) / 2);
+                    $cterm = floor((count($termArg) - 1) / 2);
                     if (count($termArg) >= 1) {
                         ?>
                         <div class="item col-01">
@@ -79,6 +80,7 @@ $lang = pll_current_language('slug') == 'en' ? 'en' : 'vn';
                                         ?>
                                     </div>
                                 </a>
+                                <?php if ($termArg[$ii + ($ii)]): ?>
                                 <a href="<?php echo $termArg[$ii + ($ii)][1]; ?>" class="project-item gradient-top">
                                     <div class="photo">
                                         <img src="<?php echo $termArg[$ii + ($ii)][0]; ?>"
@@ -90,6 +92,7 @@ $lang = pll_current_language('slug') == 'en' ? 'en' : 'vn';
                                         ?>
                                     </div>
                                 </a>
+                                <?php endif; ?>
                             </div>
                             <?php
                         }
