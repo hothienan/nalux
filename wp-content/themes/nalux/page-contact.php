@@ -93,7 +93,7 @@ $content = get_the_content();
                     ?>
                     <div class="item">
                         <div class="company-name">
-                            <?php the_title(); ?>
+                            <a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a>
                         </div>
                         <div class="address-info">
                             <?php echo get_field('project-information', get_the_ID());  ?>
