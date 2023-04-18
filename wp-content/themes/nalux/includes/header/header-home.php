@@ -12,7 +12,12 @@
             </nav>
             <div class="search-block">
                 <div class="search">
-                    <?php get_search_form(); ?>
+                    <form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url( '/' ); ?>">
+                        <input type="text" name="s" id="s" placeholder="<?php echo @pll__('Search'); ?>">
+                        <button type="submit" id="searchsubmit" class="button">
+                            <span><?php echo @pll__('Search'); ?></span>
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="langquage">
